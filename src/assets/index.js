@@ -21,19 +21,27 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 
+import materialize from "./tech/materialize.svg";
+import bootstrap from "./tech/bootstrap.png";
+import photoshop from "./tech/photoshop.png";
+import illustrator from "./tech/illustrator.png";
+import adobexd from "./tech/adobe_xd.png";
+
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 
 import ux from "./company/ux.png";
-import community from "./company/community.jpg";
-import tareas from "./company/tareas.jpg";
+import community from "./company/community.png";
+import tareas from "./company/tareas.png";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
+import gmailIcon from "./gmail.png"
+import whatsappIcon from "./wsapp.png"
 export {
   logo,
   backend,
@@ -65,5 +73,13 @@ export {
   tripguide,
   ux,
   community,
-  tareas
+  tareas,
+
+  materialize,
+  bootstrap,
+  photoshop,
+  illustrator,
+  adobexd,
+  gmailIcon,
+  whatsappIcon
 };

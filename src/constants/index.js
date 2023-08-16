@@ -25,7 +25,12 @@ import {
   threejs,
   ux,
   community,
-  tareas
+  tareas,
+  materialize,
+  bootstrap,
+  photoshop,
+  illustrator,
+  adobexd
 } from "../assets";
 
 export const navLinks = [
@@ -80,28 +85,28 @@ const technologies = [
     icon: tailwind,
   },
   {
-    name: "Matiraliza",
-    icon: docker,
+    name: "Materialize",
+    icon: materialize,
   },
   {
     name: "Bootstrap",
-    icon: docker,
+    icon: bootstrap,
   },
   {
-    name: "figma",
+    name: "Figma",
     icon: figma,
   },
   {
     name: "Photoshop",
-    icon: docker,
+    icon: photoshop,
   },
   {
     name: "Illustrator",
-    icon: docker,
+    icon: illustrator,
   },
   {
     name: "Adobe xd",
-    icon: docker,
+    icon: adobexd,
   },
 ];
 

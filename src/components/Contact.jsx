@@ -1,92 +1,57 @@
-import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
 
-import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
+import { github, gmailIcon, whatsappIcon } from "../assets";
+import { styles } from "../styles";
 
 const Contact = () => {
-  const formRef = useRef();
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
 
-  const [loading, setLoading] = useState(false);
-
-  const handleChange = (e) => {
-    const { target } = e;
-    const { name, value } = target;
-
-    setForm({
-      ...form,
-      [name]: value,
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setLoading(true);
-
-    emailjs
-      .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-        {
-          from_name: form.name,
-          to_name: "JavaScript Mastery",
-          from_email: form.email,
-          to_email: "sujata@jsmastery.pro",
-          message: form.message,
-        },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-      )
-      .then(
-        () => {
-          setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
-
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
-        },
-        (error) => {
-          setLoading(false);
-          console.error(error);
-
-          alert("Ahh, something went wrong. Please try again.");
-        }
-      );
-  };
 
   return (
-    <div
-      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
-    >
+    <div className="xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden">
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
+        className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
       >
-        <p className={styles.sectionSubText}></p>
         <h3 className={styles.sectionHeadText}>Contacto</h3>
 
-        <form
-          ref={formRef}
-          onSubmit={handleSubmit}
-          className='mt-12 flex flex-col gap-8 h-28'
+
+        <a
+          href="https://github.com/julisa-344"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-4 flex items-center gap-2 text-blue-500 hover:underline"
         >
-          
-        </form>
+          <img src={github} alt="GitHub" className="w-12 h-12" />
+          GitHub
+        </a>
+
+        <a
+          href="mailto:julisa.leon344@gmail.com"
+          className="mt-4 flex items-center gap-2 text-blue-500 hover:underline"
+        >
+          <img src={gmailIcon} alt="Gmail" className="w-12 h-12" />
+          Gmail
+        </a>
+
+        <a
+          href="https://wa.me/51937601484"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-4 flex items-center gap-2 text-blue-500 hover:underline"
+        >
+          <img src={whatsappIcon} alt="WhatsApp" className="w-8 h-8" />
+          937601484
+        </a>
+
+
       </motion.div>
 
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
-        className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
+        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
       >
         <EarthCanvas />
       </motion.div>
