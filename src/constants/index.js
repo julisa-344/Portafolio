@@ -140,6 +140,26 @@ const experiences = [
     points: [
       "Trabajé en estrecha colaboración con diseñadores de interfaces en un estudio de diseño gráfico, contribuyendo a la implementación de diseños creativos y funcionales en diversas plataformas. ",
     ],
+  },
+  {
+    title: "Diseñadora y Maquetadora de Interfaces:",
+    company_name: "",
+    icon: ux,
+    iconBg: "#383E56",
+    date: "2023",
+    points: [
+      "Me encargué del diseño y maquetación con React y Vue de interfaces web, asegurando una experiencia de usuario fluida. Adicionalmente, resolví inconvenientes técnicos para optimizar el funcionamiento del sitio. ",
+    ],
+  },
+  {
+    title: "Desarrolladora web:",
+    company_name: "Calcomaniacos",
+    icon: ux,
+    iconBg: "#383E56",
+    date: "2024",
+    points: [
+      "Diseñé y desarrollé una web para crear canvas personalizados de stickers y funcionalidades como un carrito de compras y almacenamiento en Firebase.",
+    ],
   }
 ];
 
